@@ -1,0 +1,5 @@
+services:
+  server:
+    image: nyvek/site-novidadescripto
+    ports:
+      - 3000:3000
