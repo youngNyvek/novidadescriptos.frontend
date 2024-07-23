@@ -14,10 +14,13 @@ export default function News() {
   const [news, setNews] = useState<NewsItem[]>([]);
 
   useEffect(() => {
-    fetch('http://ec2-18-188-23-208.us-east-2.compute.amazonaws.com/news')
+    if(process.env.NEXT_PUBLIC_NEWS_URL){
+      fetch(process.env.NEXT_PUBLIC_NEWS_URL)
       .then(response => response.json())
       .then(data => setNews(data))
       .catch(error => console.error('Error fetching news:', error));
+    }
+   
   }, []);
 
   return (
