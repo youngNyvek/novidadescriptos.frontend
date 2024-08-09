@@ -4,6 +4,7 @@ services:
     build:
       context: .
     environment:
-      - NEXT_PUBLIC_NEWS_URL="http://ec2-18-188-23-208.us-east-2.compute.amazonaws.com:3001/news"
+      - NEXT_PUBLIC_NEWS_URL="https://api.novidadescripto.com.br/news"
+      - NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID="ca-pub-3646211809176894"
     ports:
       - 3000:3000
